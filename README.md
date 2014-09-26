@@ -3,7 +3,7 @@ roberta-ros version 1.1a
 ROS interface to Roberta.  (c) Gomtec GmbH.
 
 This is an alpha release and may still contain bugs.  If you find any problems, please
-get back to us.
+get back to us.  See http://www.gomtec.de/ for further information.
 
 
 To get started, proceed as follows:
