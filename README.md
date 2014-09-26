@@ -22,5 +22,7 @@ roscd gomtec_robot_description
 
 3) run:
 
-roslaunch gomtec_robot_description display.launch model:=urdf/Roberta_P80_800.urdf gui:=true
+	roslaunch gomtec_robot_description display.launch model:=urdf/Roberta_P80_800.urdf gui:=true
 
+
+Good luck!  Please contact us if you run into trouble, at ros--at--gomtec dot de.
