@@ -1,0 +1,16 @@
+<package>
+  <description brief="gomtec_robot_description">
+    This package contains the mechanical, kinematic and visual description 
+    of the gomtec Roberta robot, the gomtec RoboCommander teach-in device 
+    and the gomtec gripper with and without integrated camera system.
+  </description>
+  <author>ros@gomtec.de</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://wiki.ros.org/Robots/Roberta</url>
+
+  <depend package="urdf"/>
+
+</package>
+
+

@@ -1,0 +1,13 @@
+<stack>
+  <description brief="gomtec">
+
+     gomtec ROS stack
+
+  </description>
+  <author>ros@gomtec.de</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+
+</stack>
+
+
