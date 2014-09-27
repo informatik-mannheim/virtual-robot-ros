@@ -94,7 +94,7 @@
             <origin xyz="0 0 0.141" rpy="0 0 0" />
             <axis xyz="0 1 0" />
             <limit effort="0" lower="0" upper="0.035" velocity="0.05" />
-            <mimic joint="${prefix}joint_gl_linear" />
+            <mimic joint="${prefix}joint_f1_linear" />
         </joint>
 
         <joint name="${prefix}joint_tcp" type="fixed">
