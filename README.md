@@ -18,11 +18,15 @@ The syntax of the above depends for your shell.  The above is for bash (or sh); 
 
 2) go to the corresponding subdirectory:
 
-roscd gomtec_robot_description
+	roscd gomtec_robot_description
 
 3) run:
 
 	roslaunch gomtec_robot_description display.launch model:=urdf/Roberta_P80_800.urdf gui:=true
+
+   or:
+
+	roslaunch gomtec_robot_description display_p80_800.launch
 
 
 Good luck!  Please contact us if you run into trouble, at ros--at--gomtec dot de.
