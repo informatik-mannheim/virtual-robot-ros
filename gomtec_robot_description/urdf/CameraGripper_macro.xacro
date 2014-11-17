@@ -6,7 +6,7 @@
 		<!-- link list -->
         <link name="${prefix}link_Gripper">
             <visual>
-                <origin xyz="0 0 0.0315" rpy="${pi/2} 0 ${pi/2}" />
+                <origin xyz="0 0 0.0315" rpy="${pi/2} 0 0" />
                 <geometry>
                     <mesh 
                         filename="package://gomtec_robot_description/meshes/visual/RGM1700_CameraGripper.STL" 
@@ -17,7 +17,7 @@
                 </material>
             </visual>
             <collision>
-                <origin xyz="0 0 0.0315" rpy="${pi/2} 0 ${pi/2}" />
+                <origin xyz="0 0 0.0315" rpy="${pi/2} 0 0" />
                 <geometry>
                     <mesh 
                         filename="package://gomtec_robot_description/meshes/collision/RGM1700_CameraGripper.STL" 
@@ -28,7 +28,7 @@
 
         <link name="${prefix}link_Finger1">
             <visual>
-                <origin xyz="0 -0.00323 0" rpy="${pi/2} 0 ${-pi/2}" />
+                <origin xyz="-0.00323 0 0" rpy="${pi/2} 0 ${-pi}" />
                 <geometry>
                     <mesh 
                         filename="package://gomtec_robot_description/meshes/visual/RGM1690_Finger.STL" 
@@ -39,7 +39,7 @@
                 </material>
             </visual>
             <collision>
-                <origin xyz="0 -0.00323 0" rpy="${pi/2} 0 ${-pi/2}" />
+                <origin xyz="-0.00323 0 0" rpy="${pi/2} 0 ${-pi}" />
                 <geometry>
                     <mesh 
                         filename="package://gomtec_robot_description/meshes/collision/RGM1690_Finger.STL" 
@@ -50,7 +50,7 @@
 
         <link name="${prefix}link_Finger2">
             <visual>
-                <origin xyz="0 0.00323 0" rpy="${pi/2} 0 ${pi/2}" />
+                <origin xyz="0.00323 0 0" rpy="${pi/2} 0 0" />
                 <geometry>
                     <mesh 
                         filename="package://gomtec_robot_description/meshes/visual/RGM1690_Finger.STL" 
@@ -61,7 +61,7 @@
                 </material>
             </visual>
             <collision>
-                <origin xyz="0 0.00323 0" rpy="${pi/2} 0 ${pi/2}" />
+                <origin xyz="0.00323 0 0" rpy="${pi/2} 0 0" />
                 <geometry>
                     <mesh 
                         filename="package://gomtec_robot_description/meshes/collision/RGM1690_Finger.STL" 
@@ -84,7 +84,7 @@
             <parent link="${prefix}link_Gripper" />
             <child link="${prefix}link_Finger1" />
             <origin xyz="0 0 0.141" rpy="0 0 0" />
-            <axis xyz="0 -1 0" />
+            <axis xyz="-1 0 0" />
             <limit effort="0" lower="0" upper="0.035" velocity="0.05" />
         </joint>
 
@@ -92,9 +92,9 @@
             <parent link="${prefix}link_Gripper" />
             <child link="${prefix}link_Finger2" />
             <origin xyz="0 0 0.141" rpy="0 0 0" />
-            <axis xyz="0 1 0" />
+            <axis xyz="1 0 0" />
             <limit effort="0" lower="0" upper="0.035" velocity="0.05" />
-            <mimic joint="${prefix}joint_gl_linear" />
+            <mimic joint="${prefix}joint_f1_linear" />
         </joint>
 
         <joint name="${prefix}joint_tcp" type="fixed">
