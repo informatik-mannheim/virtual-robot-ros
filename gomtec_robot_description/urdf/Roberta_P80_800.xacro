@@ -10,6 +10,9 @@
 	<xacro:include filename="$(find gomtec_robot_description)/urdf/Gripper_macro.xacro"/>
 	<xacro:Gripper prefix="" flange_link="link_RoboCommander"/>
 
+        <xacro:include filename="$(find gomtec_robot_description)/urdf/kinect_camera.urdf.xacro"/>
+	<xacro:kinect_camera_model prefix="" flange_link="link_RoboCommander"/>
+
 	<!--include filename="$(find gomtec_robot_description)/urdf/CameraGripper_macro.xacro"/>
 	<xacro:CameraGripper prefix="" flange_link="link_RoboCommander"/-->
 
