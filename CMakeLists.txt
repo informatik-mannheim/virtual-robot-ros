@@ -8,6 +8,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+sensor_msgs
+ tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,6 +108,7 @@ include_directories(
 add_executable(server_node src/server_node.cpp)
 add_executable(client_node src/client_node.cpp)
 
+
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(win_comm_chat_node win_comm_chat_generate_messages_cpp)
@@ -118,6 +121,7 @@ target_link_libraries(server_node
 target_link_libraries(client_node
   ${catkin_LIBRARIES}
 )
+
 
 #############
 ## Install ##

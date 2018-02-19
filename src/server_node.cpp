@@ -1,14 +1,4 @@
- /*************************************************************************
- * Author: Abhinav Jain
- * Contact: abhinavjain241@gmail.com, abhinav.jain@heig-vd.ch
- * Date: 28/06/2016
- *
- * This file contains source code to the server node of the ROS package
- * comm_tcp developed at LaRA (Laboratory of Robotics and Automation)
- * as part of my project during an internship from May 2016 - July 2016.
- *
- * (C) All rights reserved. LaRA, HEIG-VD, 2016 (http://lara.populus.ch/)
- ***************************************************************************/
+
 #include <ros/ros.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -66,22 +56,23 @@ int main (int argc, char** argv)
               &clilen);
   if (newsockfd < 0)
        error("ERROR on accept");
-  while(ros::ok()) {
-     ss.str(std::string()); //Clear contents of string stream
-     bzero(buffer,256);
-     n = read(newsockfd,buffer,255);
-     if (n < 0) error("ERROR reading from socket");
-     // printf("Here is the message: %s\n",buffer);
-     ss << buffer;
-     message.data = ss.str();
-     ROS_INFO("%s", message.data.c_str());
-     server_pub.publish(message);
-     n = write(newsockfd,"I got your message",18);
-     if (n < 0) error("ERROR writing to socket");
-     //close(newsockfd);
-     //close(sockfd);
-     //ros::spinOnce();
-     //d.sleep();
-  }
+
+    double qSoll[6];
+	    for(int h=0;h<6;h++){
+		qSoll[h] = (double)h;
+		std::cout <<  qSoll[h] << "\n";
+		send(sockfd, &qSoll[h], sizeof(double),0);
+	    }
+ 
+
+ float qIst[7];
+	    recv(sockfd, qIst, sizeof(qIst), 0);
+	     for(int h=0;h<7;h++){
+                
+	      std::cout << qIst[h] << "\n";
+	    }
+          ros::spinOnce();
+
+  
   return 0;
 }
